@@ -73,7 +73,7 @@ public class Employee {
 	
 	public void processTransaction(Customer cust, Vehicle vehicle) {
 		bonus += 500;
-		System.out.println(cust.getName() + " has purchased the " 
-		+ vehicle.getMake() + " " + vehicle.getModel() + " vehicle for the price of: $" + vehicle.getPrice());
+		System.out.println(cust.getName() + " has purchased the vehicle: " 
+		+ vehicle + " vehicle for the price of: $" + vehicle.getPrice());
 	}
 }

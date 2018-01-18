@@ -13,6 +13,7 @@ public class Dealership {
 		Vehicle vehicle1 = new Vehicle("Honda", "Accord", 8000);
 		Vehicle vehicle2 = new Vehicle("Jeep", "Wrangler", 10000);
 		Vehicle vehicle3 = new Vehicle("Toyota", "Camry", 5000);
+		Vehicle car = new Vehicle("Toyota", "Camry", 5000);
 		
 		// instantiate employee
 		Employee employee1 = new Employee("Robert", 5678);
@@ -27,6 +28,11 @@ public class Dealership {
 		
 		employee1.getBonus();
 		employee2.getBonus();
+		
+		// compare the data of car with the data of vehicle3 using equals()
+			// override equals method in Vehicle class
+		boolean value = car.equals(vehicle3);
+		System.out.println(value);
 	}
 
 }
