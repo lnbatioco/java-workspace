@@ -8,11 +8,21 @@ public class Vehicle {
 	private double price;
 	
 	
+	// constructor
+	public Vehicle(String make, String model, double price) {
+		super();
+		this.make = make;
+		this.model = model;
+		this.price = price;
+	}
+	
+	
 	// getters & setters
 	public String getMake() {
 		return make;
 	}
 	
+
 	public void setMake(String make) {
 		this.make = make;
 	}

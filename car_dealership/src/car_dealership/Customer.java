@@ -8,6 +8,15 @@ public class Customer {
 	private double cashOnHand;
 	
 	
+	// constructor
+	public Customer(String name, String address, double cashOnHand) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.cashOnHand = cashOnHand;
+	}
+	
+	
 	// getters & setters 
 	public String getName() {
 		return name;
