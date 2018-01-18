@@ -15,7 +15,7 @@ public class Dealership {
 		Vehicle vehicle1 = new Vehicle();
 		vehicle1.setMake("Honda");
 		vehicle1.setModel("Accord");
-		vehicle1.setPrice(10000);
+		vehicle1.setPrice(150000);
 		
 		
 		// instantiate employee
@@ -24,7 +24,7 @@ public class Dealership {
 		
 		
 		// customer purchase
-		customer1.purchaseCar(vehicle1, employee1, false);
+		customer1.purchaseCar(vehicle1, employee1, true);
 	}
 
 }

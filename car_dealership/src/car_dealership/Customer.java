@@ -37,6 +37,6 @@ public class Customer {
 	// behaviors
 	public void purchaseCar(Vehicle vehicle, Employee emp, boolean finance) {		
 		// "this" meaning customer self
-		emp.handleCustomer(this, true, vehicle);
+		emp.handleCustomer(this, finance, vehicle);
 	}
 }
