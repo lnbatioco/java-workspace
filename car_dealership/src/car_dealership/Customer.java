@@ -2,6 +2,7 @@ package car_dealership;
 
 public class Customer {
 	
+	// attributes
 	private String name;
 	private String address;
 	private double cashOnHand;
@@ -34,7 +35,8 @@ public class Customer {
 
 	
 	// behaviors
-	public void purchaseCar(Vehicle vehicle, Employee emp, boolean finance) {
-		
+	public void purchaseCar(Vehicle vehicle, Employee emp, boolean finance) {		
+		// "this" meaning customer self
+		emp.handleCustomer(this, true, vehicle);
 	}
 }
