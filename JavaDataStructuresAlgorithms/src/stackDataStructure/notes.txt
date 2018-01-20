@@ -1,0 +1,20 @@
+// THE STACK DATA STRUCTURE //
+
+STACK
+	- A bunch of things piled up on top of each other
+	- The last item inserted into it, is the first one to be removed
+	- ex) Old mail is buried down at the bottom of the stack
+	- This is referred to as LIFO 
+
+LIFO (Last In First Out)
+	- Placing an item at the top of the stack is called PUSHING it
+	- Removing an item from the top of the stack is called POPPING it
+	- PUSH and POP are the primary operations of a stack data structure
+
+(create Stack class)
+(create Application class)
+
+*** Stack may throw exceptions
+	- If we create a stack with a max size of 10 and & we push 11 elements ===> array out of bounds exception!
+	- Implement a solution
+	
