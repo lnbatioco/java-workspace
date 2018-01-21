@@ -1,0 +1,85 @@
+// QUEUE DATA STRUCTURE //
+
+UNLIKE STACK DATA STRUCTURE
+	- Stack data structure performs LIFO  (Last in, first out) operations
+
+QUEUE (line)
+	- QUEUE data structure performs FIFO (First in, first out) operations
+	- "first come, first serve" rule
+	- ex) calls waiting to be answered at a call center
+
+CIRCULAR QUEUE (overwrites values in queueArray if max slots are reached)
+	
+
+***** QUEUE CLASS EXPLAINED *****
+
+ATTRIBUTES
+
+	* int maxSize       = max number of slots
+	* long[] queueArray = slots to maintain data
+	* front             = index position for element at front of line
+	* rear              = index position for element at end of line
+	* nItems            = counter to maintain the number of items in our queue
+	
+	
+CONSTRUCTOR 
+	The constructor takes in a size argument
+	When we initialize a queue instance, this instance will have:
+	
+			* this.maxSize    = size            | a maxSize (passed in argument)
+			* this.queueArray = new long[size]  | a queueArray of type long with a defined maxSize
+			* front           = 0               | a front variable to keep track of the first array slot                   
+			* rear            = -1              | a rear variable to keep track of the last array slot                     
+			* nItems          = 0               | an nItems variable to keep track of the number of items within the queue 
+	
+			
+<-- METHOD : insert(long item) --> 
+	Insert an item of type long into the queue instance's queueArray
+	When this method is invoked:
+			
+			* if queueArray isFull() | let user know & do nothing
+			* else...				 | do the following...			
+	
+			* rear++                 | rear is increased by 1.
+					                 | we now have an array position we can insert a value to
+					                 | in the first invocation, rear goes from -1 to 0
+					 		         		| this is how we get an element at index 0 
+			* queArray[rear] = item  | we are inserting a long item into our new rear position
+			* nItems++               | nItems is incremented since we added a new item into the queueArray
+	
+	
+<-- METHOD : remove() --> 
+	Since queues follow the FIFO rule, items are removed from the FRONT of the queueArray
+			
+			* if queueArray isEmpty()             | let user know & do nothing
+			* else ...                            | do the following...
+			
+			* long toRemove =  queueArray[front]  | create a variable toRemove to store the front value of the queueArray
+			* front++                             | since the current value of front will be removed, front needs to be increased 
+												  		| there can now be a new value for front
+			* if(front == maxSize){               | if front is equal to maxSize, front is then equal to 0
+				front = 0                         | queueArray is currently empty
+			  }
+			* nItems--                            | since an item from the array is removed, the size of queueArray decreases
+			* return toRemove                     | return value of toRemove
+				
+
+<-- METHOD : peekFront() --> 
+	Peak in front of the line to see what is at the beginning of the queueArray
+
+
+<-- METHOD : view() --> 
+	View the contents of the queue data structure
+	Loop over the queueArray
+	Print (without new line) the value of each particular index 	
+	
+	
+<-- METHOD : isEmpty() --> 
+	Checks to see if queueArray is empty
+	Empty if nItems equals 0
+
+
+<-- METHOD : isFull() --> 
+	Checks to see if queueArray is full
+	Full if nItems equals maxSize;
+		
